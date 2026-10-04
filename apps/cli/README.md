@@ -9,13 +9,13 @@ ShadowAPI is a local-first reverse proxy. It learns routes, request and response
 Requires Node.js 22 or newer.
 
 ```bash
-npx shadowapi --target http://localhost:3000
+npx @darkooom/shadowapi --target http://localhost:3000
 ```
 
 Or install it globally:
 
 ```bash
-npm install --global shadowapi
+npm install --global @darkooom/shadowapi
 shadowapi --target http://localhost:3000
 ```
 
