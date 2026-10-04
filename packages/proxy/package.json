@@ -1,0 +1,30 @@
+{
+  "name": "@shadowapi/proxy",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "clean": "rm -rf dist coverage",
+    "lint": "eslint src test",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@shadowapi/recorder": "workspace:*",
+    "@shadowapi/shared": "workspace:*",
+    "fastify": "^5.6.1",
+    "undici": "^7.16.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  }
+}

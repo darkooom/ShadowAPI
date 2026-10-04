@@ -1,0 +1,44 @@
+{
+  "name": "shadowapi-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Turn real API traffic into documentation, mocks and contracts.",
+  "author": "Darko M",
+  "license": "Apache-2.0",
+  "keywords": [
+    "api",
+    "openapi",
+    "proxy",
+    "mock-server",
+    "contract-testing",
+    "developer-tools"
+  ],
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev --parallel",
+    "example": "pnpm --filter @shadowapi/example-express dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo run lint",
+    "shadowapi": "turbo run build --filter=shadowapi --output-logs=errors-only && shadowapi",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@types/node": "^24.7.0",
+    "eslint": "^9.37.0",
+    "prettier": "^3.6.2",
+    "shadowapi": "workspace:*",
+    "tsx": "^4.20.6",
+    "turbo": "^2.5.8",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "^3.2.4"
+  }
+}

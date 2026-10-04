@@ -1,0 +1,42 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+.turbo/
+
+# ShadowAPI captures and generated private contracts
+.shadowapi/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.har
+openapi.yaml
+openapi.json
+*.openapi.yaml
+*.openapi.json
+!examples/generated/openapi.yaml
+
+# Local environment and package artifacts
+.env
+.env.*
+!.env.example
+*.tgz
+
+# Logs, debug output, and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.pid
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/

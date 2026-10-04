@@ -1,0 +1,188 @@
+openapi: 3.1.0
+info:
+  title: ShadowAPI Generated API
+  version: 0.1.0
+paths:
+  /projects:
+    get:
+      responses:
+        "200":
+          description: Observed 1 time
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      format: uuid
+                    name:
+                      type: string
+                  required:
+                    - id
+                    - name
+                  additionalProperties: false
+              example:
+                - id: a8f8c20a-4590-42bd-ae37-d0d833a2ec71
+                  name: ShadowAPI
+                - id: 9cd213cb-1013-4f7e-8a54-d9dd6c92a808
+                  name: Example
+      x-shadowapi-samples: 1
+      x-shadowapi-confidence: 1
+  /projects/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          x-shadowapi-confidence: 1
+      responses:
+        "200":
+          description: Observed 1 time
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                  name:
+                    type: string
+                required:
+                  - id
+                  - name
+                additionalProperties: false
+              example:
+                id: a8f8c20a-4590-42bd-ae37-d0d833a2ec71
+                name: ShadowAPI
+      x-shadowapi-samples: 1
+      x-shadowapi-confidence: 1
+  /users:
+    get:
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Observed 2 times
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          type: string
+                        active:
+                          type: boolean
+                        avatar:
+                          type: string
+                          format: uri
+                      required:
+                        - id
+                        - name
+                        - active
+                      additionalProperties: false
+                  page:
+                    type: integer
+                required:
+                  - data
+                  - page
+                additionalProperties: false
+              example:
+                data:
+                  - id: "1"
+                    name: Darko
+                    active: true
+                  - id: "2"
+                    name: Max
+                    active: false
+                    avatar: https://example.com/max.jpg
+                page: 1
+      x-shadowapi-samples: 2
+      x-shadowapi-confidence: 1
+  /users/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+          x-shadowapi-confidence: 0.96
+      responses:
+        "200":
+          description: Observed 10 times
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  active:
+                    type: boolean
+                  avatar:
+                    type: string
+                    format: uri
+                required:
+                  - id
+                  - name
+                  - active
+                additionalProperties: false
+              example:
+                id: "1"
+                name: Darko
+                active: true
+        "404":
+          description: Observed 1 time
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                  - error
+                additionalProperties: false
+              example:
+                error: User not found
+      x-shadowapi-samples: 11
+      x-shadowapi-confidence: 1
+  /users/me:
+    get:
+      responses:
+        "404":
+          description: Observed 1 time
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                  - error
+                additionalProperties: false
+              example:
+                error: User not found
+      x-shadowapi-samples: 1
+      x-shadowapi-confidence: 1
