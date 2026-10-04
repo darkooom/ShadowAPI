@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "description": "Turn real API traffic into documentation, mocks and contracts.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkooom/ShadowAPI.git"
+  },
+  "homepage": "https://github.com/darkooom/ShadowAPI#readme",
+  "bugs": {
+    "url": "https://github.com/darkooom/ShadowAPI/issues"
+  },
   "author": "Darko M",
   "license": "Apache-2.0",
   "keywords": [
