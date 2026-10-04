@@ -180,7 +180,7 @@ Redaction is defense in depth, not a guarantee. Avoid production traffic unless 
 
 ## Project status
 
-ShadowAPI is preparing its first `0.1.0` GitHub release. The implemented surface and planned work are tracked separately in the [roadmap](docs/roadmap.md) and [changelog](CHANGELOG.md).
+ShadowAPI `0.1.0` is the first public release and is available as [`@darkooom/shadowapi`](https://www.npmjs.com/package/@darkooom/shadowapi). The implemented surface and planned work are tracked separately in the [roadmap](docs/roadmap.md) and [changelog](CHANGELOG.md).
 
 Reserved visual asset paths are documented in [assets/README.md](assets/README.md); no placeholder artwork is presented as finished branding.
 
