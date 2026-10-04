@@ -1,5 +1,5 @@
 {
-  "name": "shadowapi",
+  "name": "@darkooom/shadowapi",
   "version": "0.1.0",
   "type": "module",
   "license": "Apache-2.0",
@@ -48,7 +48,7 @@
     "clean": "rm -rf dist coverage",
     "dev": "tsx src/index.ts",
     "lint": "eslint src",
-    "prepack": "pnpm --workspace-root exec turbo run build --filter=shadowapi --output-logs=errors-only",
+    "prepack": "pnpm --workspace-root exec turbo run build --filter=@darkooom/shadowapi --output-logs=errors-only",
     "test": "vitest run --passWithNoTests",
     "typecheck": "tsc --noEmit"
   },

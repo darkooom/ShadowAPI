@@ -33,7 +33,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "turbo run lint",
-    "shadowapi": "turbo run build --filter=shadowapi --output-logs=errors-only && shadowapi",
+    "shadowapi": "turbo run build --filter=@darkooom/shadowapi --output-logs=errors-only && shadowapi",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck"
   },
@@ -42,7 +42,7 @@
     "@types/node": "^24.7.0",
     "eslint": "^9.37.0",
     "prettier": "^3.6.2",
-    "shadowapi": "workspace:*",
+    "@darkooom/shadowapi": "workspace:*",
     "tsx": "^4.20.6",
     "turbo": "^2.5.8",
     "typescript": "^5.9.3",

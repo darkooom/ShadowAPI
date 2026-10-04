@@ -3,7 +3,7 @@
 **Turn observed HTTP traffic into an OpenAPI 3.1 contract, a local mock server, and actionable contract diffs.**
 
 [![CI](https://github.com/darkooom/ShadowAPI/actions/workflows/ci.yml/badge.svg)](https://github.com/darkooom/ShadowAPI/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/shadowapi)](https://www.npmjs.com/package/shadowapi)
+[![npm](https://img.shields.io/npm/v/%40darkooom%2Fshadowapi)](https://www.npmjs.com/package/@darkooom/shadowapi)
 [![License](https://img.shields.io/github/license/darkooom/ShadowAPI)](LICENSE)
 
 ShadowAPI is a local-first reverse proxy. Point a client at it, exercise an API, and let deterministic inference learn routes, request/response schemas, status codes, and examples—without annotations or SDK instrumentation.
@@ -39,13 +39,13 @@ Known static routes such as `/users/me`, `/users/search`, and `/users/settings` 
 ShadowAPI requires Node.js 22 or newer. Run it without installing:
 
 ```bash
-npx shadowapi --target http://localhost:3000
+npx @darkooom/shadowapi --target http://localhost:3000
 ```
 
 Or install the CLI globally:
 
 ```bash
-npm install --global shadowapi
+npm install --global @darkooom/shadowapi
 shadowapi --target http://localhost:3000
 ```
 
