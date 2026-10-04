@@ -3,7 +3,26 @@
   "version": "0.1.0",
   "type": "module",
   "license": "Apache-2.0",
-  "description": "Local-first API intelligence proxy",
+  "description": "Turn observed HTTP traffic into OpenAPI 3.1, local mocks, and contract diffs",
+  "author": "Darko M",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkooom/ShadowAPI.git",
+    "directory": "apps/cli"
+  },
+  "homepage": "https://github.com/darkooom/ShadowAPI#readme",
+  "bugs": {
+    "url": "https://github.com/darkooom/ShadowAPI/issues"
+  },
+  "keywords": [
+    "api",
+    "openapi",
+    "proxy",
+    "mock-server",
+    "contract-testing",
+    "api-testing",
+    "developer-tools"
+  ],
   "engines": {
     "node": ">=22"
   },

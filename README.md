@@ -2,6 +2,10 @@
 
 **Turn observed HTTP traffic into an OpenAPI 3.1 contract, a local mock server, and actionable contract diffs.**
 
+[![CI](https://github.com/darkooom/ShadowAPI/actions/workflows/ci.yml/badge.svg)](https://github.com/darkooom/ShadowAPI/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/shadowapi)](https://www.npmjs.com/package/shadowapi)
+[![License](https://img.shields.io/github/license/darkooom/ShadowAPI)](LICENSE)
+
 ShadowAPI is a local-first reverse proxy. Point a client at it, exercise an API, and let deterministic inference learn routes, request/response schemas, status codes, and examples—without annotations or SDK instrumentation.
 
 > [!WARNING]
@@ -30,9 +34,26 @@ GET /users/3
 
 Known static routes such as `/users/me`, `/users/search`, and `/users/settings` remain separate.
 
-## Quick start from this repository
+## Quick start
 
-ShadowAPI currently requires Node.js 22 and pnpm through Corepack. This first GitHub release is source-first; npm distribution is intentionally not part of this release.
+ShadowAPI requires Node.js 22 or newer. Run it without installing:
+
+```bash
+npx shadowapi --target http://localhost:3000
+```
+
+Or install the CLI globally:
+
+```bash
+npm install --global shadowapi
+shadowapi --target http://localhost:3000
+```
+
+Then point your client at `http://localhost:9000` and exercise the API you want to learn.
+
+### Develop from source
+
+The monorepo uses pnpm through Corepack:
 
 ```bash
 corepack enable
@@ -40,7 +61,7 @@ pnpm install --frozen-lockfile
 pnpm build
 ```
 
-Start the bundled API:
+Start the bundled example API:
 
 ```bash
 pnpm example
