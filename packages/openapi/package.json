@@ -24,7 +24,7 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@scalar/openapi-parser": "^0.29.10",
+    "@scalar/openapi-parser": "^0.29.12",
     "tsup": "^8.5.0"
   }
 }
